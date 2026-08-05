@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oncom Sumedang</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            background:#f4f4f4;
+        }
+
+        header{
+            background:#8B4513;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        nav{
+            background:#5c3317;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        section{
+            width:80%;
+            margin:auto;
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+        }
+
+        img{
+            width:100%;
+            max-width:500px;
+            display:block;
+            margin:auto;
+            border-radius:10px;
+        }
+    
+    audio{
+    display:block;
+    margin:15px auto;
+}
+
+        footer{
+            background:#8B4513;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+    
+    footer{
+    background:#8B4513;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Banner Sambutan */
+#welcome{
+    background:#FFD54F;
+    color:#5D4037;
+    text-align:center;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+    animation:muncul 1.5s ease;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+    
+    #fakta{
+    width:80%;
+    margin:20px auto;
+    background:#FFF8DC;
+    border-left:6px solid #8B4513;
+    padding:15px;
+    border-radius:10px;
+    font-size:17px;
+    color:#5D4037;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+#fakta h3{
+    margin-top:0;
+}
+
+#fakta button{
+    background:#8B4513;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+#fakta button:hover{
+    background:#5C3317;
+}
+  
+    /* Maskot Petani Oncom */
+#maskot{
+    position:fixed;
+    bottom:10px;
+    left:15px;
+    font-size:55px;
+    z-index:100;
+    animation:jalan 3s infinite alternate;
+    cursor:pointer;
+}
+
+@keyframes jalan{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(30px);
+    }
+}
+
+#pesanMaskot{
+    display:none;
+    position:fixed;
+    bottom:80px;
+    left:20px;
+    width:220px;
+    background:#FFF8DC;
+    color:#5D4037;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    z-index:101;
+    text-align:center;
+    font-size:15px;
+}
+    
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Oncom Sumedang</h1>
+    <p>Kuliner Tradisional Khas Sumedang</p>
+    <b>👋 Wilujeng Sumping di Website Oncom Sumedang.
+    Hayu uninga leuwih deket kuliner khas Kabupaten Sumedang.</b>
+</div>
+</header>
+    
+<nav>
+    <a href="index.html">Tentang</a>
+    <a href="manfaat .html">Manfaat</a>
+    <a href="komposisi.html">komposisi</a>
+  <a href="sejarah.html">Sejarah</a>
+    <a href="kontak.html">Kontak</a>
+</nav>
+
+    <div id="fakta">
+    <h3>💡 Fakta Menarik Tentang Oncom</h3>
+
+    <p id="isiFakta"></p>
+
+    <button onclick="gantiFakta()">Fakta Lainnya</button>
+</div>
+    
+<section id="tentang">
+    <h2>Tentang Oncom Sumedang</h2>
+
+    <img src="oncom.png" alt="Oncom">
+
+    <p>
+        <b>Oncom Sumedang merupakan salah satu makanan khas Kabupaten Sumedang,
+        Jawa Barat.</b>
+        Oncom dibuat melalui proses fermentasi dan memiliki cita rasa
+        gurih yang khas. Di Sumedang, terutama daerah Pasireungit, oncom menjadi
+        salah satu produk unggulan masyarakat.
+    </p>
+</section>
+  
+    <audio autoplay loop controls>
+    <source src="sulingsunda.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+</audio>
+    
+  <footer>
+    <p>&copy; 2026 Website Oncom Sumedang</p>
+</footer>
+    
+    <script>
+const fakta = [
+    "Oncom merupakan makanan hasil fermentasi khas Jawa Barat.",
+    "Oncom sering diolah menjadi pepes, tumis, dan combro.",
+    "Kabupaten Sumedang terkenal sebagai salah satu daerah penghasil oncom berkualitas.",
+    "Oncom mengandung protein nabati yang baik untuk tubuh.",
+    "Ada dua jenis oncom, yaitu oncom merah dan oncom hitam.",
+    "Oncom menjadi salah satu kuliner tradisional yang masih dilestarikan hingga saat ini.",
+    "Banyak UMKM di Sumedang yang memproduksi oncom sebagai mata pencaharian."
+];
+
+function gantiFakta(){
+    const acak = Math.floor(Math.random() * fakta.length);
+    document.getElementById("isiFakta").innerHTML = fakta[acak];
+}
+
+gantiFakta();
+
+function tutupLelucon(){
+
+    document.getElementById("lelucon").style.display="none";
+
+}
+    
+    function pesanPetani(){
+
+    let pesan = document.getElementById("pesanMaskot");
+
+    if(pesan.style.display=="block"){
+        pesan.style.display="none";
+    }
+    else{
+        pesan.style.display="block";
+    }
+
+}
+    
+</script>
+    
+    <!-- Maskot Petani Oncom -->
+
+<div id="maskot" onclick="pesanPetani()">
+    👨‍🌾
+</div>
+
+<div id="pesanMaskot">
+    🌱 Halo! Saya petani oncom.<br><br>
+    Saya menjaga rasa khas Oncom Sumedang agar tetap dikenal banyak orang.
+</div>
+    
+</body>
+</html>

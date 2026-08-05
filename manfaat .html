@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manfaat Oncom Sumedang</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            background:#f4f4f4;
+        }
+
+        header{
+            background:#8B4513;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        nav{
+            background:#5c3317;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:#FFD54F;
+        }
+
+        section{
+            width:80%;
+            margin:auto;
+            background:white;
+            padding:20px;
+            margin-top:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        img{
+            width:100%;
+            max-width:500px;
+            display:block;
+            margin:20px auto;
+            border-radius:10px;
+        }
+
+        footer{
+            background:#8B4513;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+    
+    #fakta{
+    width:80%;
+    margin:20px auto;
+    background:#FFF8DC;
+    border-left:6px solid #8B4513;
+    padding:15px;
+    border-radius:10px;
+    font-size:17px;
+    color:#5D4037;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+#fakta h3{
+    margin-top:0;
+}
+
+#fakta button{
+    background:#8B4513;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+#fakta button:hover{
+    background:#5C3317;
+}
+    
+    /* Maskot Kucing Oncom */
+#maskotKucing{
+    position:fixed;
+    bottom:10px;
+    right:15px;
+    font-size:55px;
+    z-index:100;
+    cursor:pointer;
+    animation:gerakKucing 2s infinite alternate;
+}
+
+@keyframes gerakKucing{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-15px);
+    }
+}
+
+#pesanKucing{
+    display:none;
+    position:fixed;
+    bottom:80px;
+    right:20px;
+    width:230px;
+    background:#FFF8DC;
+    color:#5D4037;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    text-align:center;
+    z-index:101;
+}
+    
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Manfaat Oncom Sumedang</h1>
+    <p>KULINER TRADISIONAL KHAS SUMEDANG</p>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="manfaat.html">Manfaat</a>
+    <a href="komposisi.html">komposisi</a>
+  <a href="sejarah.html">sejarah</a>
+  <a href="kontak">kontak</a>
+</nav>
+
+    <div id="fakta">
+    <h3>💡 Fakta Menarik Tentang Oncom</h3>
+
+    <p id="isiFakta"></p>
+
+    <button onclick="gantiFakta()">Fakta Lainnya</button>
+</div>
+    
+<section>
+
+    <img src="oncom.png" alt="Oncom Sumedang">
+
+    <h2>Manfaat Oncom</h2>
+
+    <ul>
+        <li>Menjadi sumber protein nabati yang baik bagi tubuh.</li>
+        <li>Mengandung serat yang membantu melancarkan pencernaan.</li>
+        <li>Kaya vitamin B hasil proses fermentasi.</li>
+        <li>Memiliki cita rasa gurih sehingga cocok untuk berbagai masakan.</li>
+        <li>Merupakan makanan tradisional khas Sumedang yang perlu dilestarikan.</li>
+    </ul>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Website Oncom Sumedang</p>
+</footer>
+    
+    <!-- Maskot Kucing Pembawa Oncom -->
+
+<div id="maskotKucing" onclick="pesanKucing()">
+🐱🧺
+</div>
+
+<div id="pesanKucing">
+    🐱 Halo! Saya Miko si kucing pembawa oncom.<br><br>
+    Saya membantu mengenalkan Oncom Sumedang agar semakin terkenal! 🌱
+</div>
+
+    <script>
+const fakta = [
+   "Oncom sering dijadikan lauk sederhana dengan harga yang terjangkau.",
+    "Oncom dapat diolah menjadi berbagai hidangan kreatif dan modern.",
+    "Fermentasi pada oncom membantu meningkatkan cita rasa makanan.",
+    "Combro, salah satu jajanan khas Sunda, menggunakan oncom sebagai isiannya.",
+    "Oncom merupakan contoh makanan yang memanfaatkan sisa bahan pangan sehingga mengurangi limbah.",
+];
+
+function gantiFakta(){
+    const acak = Math.floor(Math.random() * fakta.length);
+    document.getElementById("isiFakta").innerHTML = fakta[acak];
+}
+
+gantiFakta();
+    
+    function pesanKucing(){
+
+    let pesan = document.getElementById("pesanKucing");
+
+    if(pesan.style.display=="block"){
+        pesan.style.display="none";
+    }
+    else{
+        pesan.style.display="block";
+    }
+
+}
+    
+</script>
+    
+</body>
+</html>

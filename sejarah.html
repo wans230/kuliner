@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah Oncom Sumedang</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            background:#f4f4f4;
+        }
+
+        header{
+            background:#8B4513;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        nav{
+            background:#5c3317;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:15px;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:#FFD54F;
+        }
+
+        section{
+            width:80%;
+            margin:20px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.2);
+        }
+
+        img{
+            width:100%;
+            max-width:500px;
+            display:block;
+            margin:20px auto;
+            border-radius:10px;
+        }
+
+        footer{
+            background:#8B4513;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:20px;
+        }
+    
+    #fakta{
+    width:80%;
+    margin:20px auto;
+    background:#FFF8DC;
+    border-left:6px solid #8B4513;
+    padding:15px;
+    border-radius:10px;
+    font-size:17px;
+    color:#5D4037;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+#fakta h3{
+    margin-top:0;
+}
+
+#fakta button{
+    background:#8B4513;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+#fakta button:hover{
+    background:#5C3317;
+}
+    
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sejarah Oncom Sumedang</h1>
+</header>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="manfaat .html">Manfaat</a>
+    <a href="komposisi.html">komposisi</a>
+    <a href="sejarah.html">Sejarah</a>
+  <a href="Kontak.html">Kontak</a>
+</nav>
+    
+    <div id="fakta">
+    <h3>💡 Fakta Menarik Tentang Oncom</h3>
+
+    <p id="isiFakta"></p>
+
+    <button onclick="gantiFakta()">Fakta Lainnya</button>
+</div>
+
+<section>
+
+    <img src="oncom.png" alt="Oncom Sumedang">
+
+    <h2>Sejarah Oncom di Sumedang</h2>
+
+    <p>
+        Oncom merupakan salah satu makanan tradisional khas Jawa Barat yang telah
+        dikenal sejak lama. Di Kabupaten Sumedang, oncom menjadi salah satu hasil
+        olahan pangan yang banyak diproduksi oleh masyarakat, terutama di beberapa
+        desa yang memiliki usaha rumahan.
+    </p>
+
+    <p>
+        Oncom dibuat melalui proses fermentasi ampas kacang tanah atau ampas kedelai
+        menggunakan jamur tertentu. Proses ini menghasilkan makanan yang memiliki
+        rasa gurih, aroma khas, dan kandungan gizi yang baik. Di Sumedang, oncom
+        sering diolah menjadi berbagai masakan seperti oncom bakar, tumis oncom,
+        pepes oncom, dan isian combro.
+    </p>
+
+    <p>
+        Hingga saat ini, oncom tetap menjadi salah satu kuliner khas Sumedang yang
+        digemari masyarakat. Selain menjadi makanan sehari-hari terutama di Desa Pasir Reungit Kecamatan Paseh, oncom juga menjadi
+        bagian dari warisan kuliner Sunda yang terus dilestarikan dari generasi ke
+        generasi.
+    </p>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Website Oncom Sumedang</p>
+</footer>
+
+    <script>
+const fakta = [
+    "Oncom dapat dimasak dengan cara digoreng, dibakar, dikukus, maupun ditumis.",
+"Rasa oncom semakin nikmat jika dipadukan dengan cabai, bawang, dan kencur.",
+"Oncom merupakan salah satu makanan yang mudah ditemukan di berbagai pasar tradisional di Jawa Barat.",
+"Tekstur oncom yang lembut membuatnya mudah menyerap bumbu masakan.",
+"Banyak keluarga di Jawa Barat menjadikan oncom sebagai menu sehari-hari.",
+"Oncom sering dijual dalam bentuk balok atau kotak agar mudah dipotong sesuai kebutuhan.",
+"Beberapa restoran khas Sunda menyajikan menu oncom sebagai hidangan andalan.",
+"Olahan oncom dapat dipadukan dengan tahu, tempe, atau sayuran.",
+"Oncom memiliki aroma khas yang menjadi ciri utama hasil fermentasi.",
+"Selain untuk lauk, oncom juga dapat dijadikan isian berbagai jajanan tradisional.",
+"Oncom merupakan salah satu contoh kreativitas masyarakat dalam mengolah bahan pangan menjadi makanan bernilai.",
+"Banyak wisatawan membeli oncom sebagai oleh-oleh saat berkunjung ke Jawa Barat.",
+"Oncom cocok disantap saat masih hangat karena cita rasanya lebih terasa.",
+"Pengolahan oncom yang baik dapat menghasilkan rasa gurih tanpa perlu banyak penyedap.",
+"Oncom menjadi salah satu makanan yang memperkaya ragam kuliner Nusantara.",
+"Di beberapa daerah, oncom dipadukan dengan daun kemangi untuk menambah aroma masakan.",
+"Oncom dapat disimpan di lemari pendingin agar tetap segar lebih lama.",
+"Olahan oncom sering disajikan bersama lalapan dan sambal khas Sunda.",
+"Makanan tradisional seperti oncom membantu memperkenalkan kekayaan budaya Indonesia kepada generasi muda.",
+"Menikmati oncom berarti ikut menghargai dan melestarikan warisan kuliner daerah."
+];
+
+function gantiFakta(){
+    const acak = Math.floor(Math.random() * fakta.length);
+    document.getElementById("isiFakta").innerHTML = fakta[acak];
+}
+
+gantiFakta();
+</script>
+    
+</body>
+</html>
